@@ -9,7 +9,10 @@ pipeline {
       }
       stage('Docker Build') {
          steps {
-            sh 'docker images -a'
+            sh '''#!/bin/bash
+                  echo "Hello World!"
+                  docker images -a
+               '''
          }
       }
    }
